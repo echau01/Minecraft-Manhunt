@@ -1,6 +1,6 @@
 main: main.Main
 name: Manhunt
-version: 1.0
+version: 0.1.0
 commands:
   addhunter:
     description: Add a player as a hunter.
