@@ -6,7 +6,7 @@ version 1.16.2 and was built using the Spigot 1.16.2 API.
 
 ## Commands
 - /addhunter \<username\>: sets the player with given username as a hunter, and adds a compass 
-to the player's inventory
+to the player's inventory (if the player is online and is not already a hunter)
 - /removehunter \<username\>: removes the hunter role from the player with given username
 - /gethunters: get a list of all current hunters' usernames
 
