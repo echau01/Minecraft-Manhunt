@@ -1,0 +1,13 @@
+main: main.Main
+name: Manhunt
+version: 1.0
+commands:
+  addhunter:
+    description: Add a player as a hunter.
+    usage: /addhunter <username>
+  gethunters:
+    description: Get the usernames of all current hunters.
+    usage: /gethunters
+  removehunter:
+    description: Remove a player from the list of hunters.
+    usage: /removehunter <username>
