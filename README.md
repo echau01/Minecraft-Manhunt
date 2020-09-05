@@ -15,7 +15,7 @@ to the player's inventory (if the player is online and is not already a hunter)
 Hunters are automatically given a compass that allows them to track down victims. If you are a hunter,
 right-click the compass to track the nearest player who is not a hunter.
 
-## Adding the Plugin to your Server
+## Installation Instructions
 
 To add the plugin to your server, download the JAR file in the latest release and place it in your
 server's plugins folder.
