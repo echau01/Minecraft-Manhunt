@@ -1,15 +1,16 @@
-package main.commands;
+package manhunt.main.commands;
 
-import main.Main;
+import manhunt.main.Main;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Set;
+import java.util.UUID;
 
 public class GetHuntersCommand implements CommandExecutor {
     private Main plugin;
@@ -25,13 +26,13 @@ public class GetHuntersCommand implements CommandExecutor {
             Player p = (Player) sender;
             if (label.equals("gethunters")) {
                 if (args.length == 0) {
-                    Set<String> hunterNames = plugin.getHunterNames();
-                    if (!hunterNames.isEmpty()) {
+                    Set<UUID> hunterIds = plugin.getHunterIds();
+                    if (!hunterIds.isEmpty()) {
                         StringBuilder hunters = new StringBuilder();
-                        Iterator<String> it = hunterNames.iterator();
-                        String oneHunter = it.next();
+                        Iterator<UUID> it = hunterIds.iterator();
+                        String oneHunter = Bukkit.getOfflinePlayer(it.next()).getName();
                         while (it.hasNext()) {
-                            hunters.append(it.next()).append(", ");
+                            hunters.append(Bukkit.getOfflinePlayer(it.next()).getName()).append(", ");
                         }
                         hunters.append(oneHunter);
                         p.sendMessage(ChatColor.GREEN + "The current hunters are: "

@@ -1,10 +1,12 @@
 <component name="libraryTable">
   <library name="lib">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/lib" />
+      <root url="jar://$PROJECT_DIR$/lib/gson-2.8.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spigot-api-1.16.2-R0.1-SNAPSHOT-shaded.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
-    <jarDirectory url="file://$PROJECT_DIR$/lib" recursive="false" />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/gson-2.8.6-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

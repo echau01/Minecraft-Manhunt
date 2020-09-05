@@ -1,6 +1,6 @@
-package main.listeners;
+package manhunt.main.listeners;
 
-import main.Main;
+import manhunt.main.Main;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -19,7 +19,7 @@ public class PlayerRespawnListener implements Listener {
     @EventHandler
     public void onPlayerRespawn(PlayerRespawnEvent e) {
         Player p = e.getPlayer();
-        if (plugin.getHunterNames().contains(p.getName())) {
+        if (plugin.getHunterIds().contains(p.getUniqueId())) {
             p.getInventory().addItem(new ItemStack(Material.COMPASS));
         }
     }

@@ -1,6 +1,6 @@
-package main.commands;
+package manhunt.main.commands;
 
-import main.Main;
+import manhunt.main.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -25,9 +25,9 @@ public class AddHunterCommand implements CommandExecutor {
             Player p = (Player) sender;
             if (label.equals("addhunter")) {
                 if (args.length == 1) {
-                    Player hunter = Bukkit.getServer().getPlayer(args[0]);
+                    Player hunter = Bukkit.getServer().getPlayerExact(args[0]);
                     if (hunter != null) {
-                        if (!plugin.getHunterNames().contains(hunter.getName())) {
+                        if (!plugin.getHunterIds().contains(hunter.getUniqueId())) {
                             plugin.addHunter(hunter);
                             hunter.getInventory().addItem(new ItemStack(Material.COMPASS, 1));
                             Bukkit.getServer().broadcastMessage(ChatColor.GREEN + "[Server Broadcast] " + ChatColor.RED +
