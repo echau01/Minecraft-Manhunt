@@ -27,7 +27,7 @@ public class RemoveHunterCommand implements CommandExecutor {
     }
 
     // The command "/removehunter <username>" removes the hunter role from the player with the given username.
-    // If the player is not a hunter or is not online, the command just prints an appropriate message.
+    // If the player could not be found, we notify the command sender of this.
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (sender instanceof Player) {

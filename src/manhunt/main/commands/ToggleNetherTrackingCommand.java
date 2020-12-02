@@ -15,6 +15,8 @@ public class ToggleNetherTrackingCommand implements CommandExecutor {
         this.plugin = plugin;
     }
 
+    // Implements the command /togglenethertracking
+    // All this command really does is toggle the togglenethertracking config setting in config.yml
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (sender instanceof Player) {
