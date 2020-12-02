@@ -5,9 +5,9 @@ This Minecraft plugin is my version of the Manhunt plugin that appears in the Yo
 version 1.16.2 and was built using the Spigot 1.16.2 API.
 
 ## Commands
-- ```/addhunter \<username\>```: sets the player with given username as a hunter, and adds a compass 
+- ```/addhunter <username>```: sets the player with given username as a hunter, and adds a compass 
 to the player's inventory (if the player is online and is not already a hunter)
-- ```/removehunter \<username\>```: removes the hunter role from the player with given username
+- ```/removehunter <username>```: removes the hunter role from the player with given username
 - ```/gethunters```: gets a list of all current hunters' usernames
 - ```/togglenethertracking```: toggles the ability of the hunters to track players in the Nether
 
