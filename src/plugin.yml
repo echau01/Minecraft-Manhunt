@@ -1,6 +1,6 @@
 main: manhunt.main.Main
 name: Manhunt
-version: 0.1.1
+version: 0.2.0
 api-version: 1.16
 description: A recreation of the YouTuber Dream's Minecraft Manhunt plugin
 author: Eugene Chau
@@ -14,3 +14,6 @@ commands:
   removehunter:
     description: Remove a player from the list of hunters.
     usage: /removehunter <username>
+  togglenethertracking:
+    description: Toggles the ability for hunters to track players in the Nether.
+    usage: /togglenethertracking

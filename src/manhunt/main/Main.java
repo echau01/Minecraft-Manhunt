@@ -3,6 +3,7 @@ package manhunt.main;
 import manhunt.main.commands.AddHunterCommand;
 import manhunt.main.commands.GetHuntersCommand;
 import manhunt.main.commands.RemoveHunterCommand;
+import manhunt.main.commands.ToggleNetherTrackingCommand;
 import manhunt.main.listeners.CompassClickListener;
 import manhunt.main.listeners.PlayerRespawnListener;
 import org.bukkit.OfflinePlayer;
@@ -25,6 +26,9 @@ public class Main extends JavaPlugin implements Listener {
         getCommand("addhunter").setExecutor(new AddHunterCommand(this));
         getCommand("gethunters").setExecutor(new GetHuntersCommand(this));
         getCommand("removehunter").setExecutor(new RemoveHunterCommand(this));
+        getCommand("togglenethertracking").setExecutor(new ToggleNetherTrackingCommand(this));
+
+        setUpConfig();
     }
 
     @Override
@@ -43,5 +47,9 @@ public class Main extends JavaPlugin implements Listener {
     // EFFECTS: removes given hunter's name from hunterNames
     public void removeHunter(OfflinePlayer hunter) {
         hunterIds.remove(hunter.getUniqueId());
+    }
+
+    private void setUpConfig() {
+        this.saveDefaultConfig();
     }
 }
